@@ -22,7 +22,7 @@ public class TweetCollection
 	/**
 	 * The maximum number of tweets to print in toString().
 	 */
-	private static final int MAX_TWEETS_TO_PRINT = 200;
+	private static final int MAX_TWEETS_TO_PRINT = 300;
 
 	/**
 	 * Constructs a new TweetCollection from the given input file. The
@@ -280,10 +280,10 @@ public class TweetCollection
 				ret += t + "\n";
 			}
 		} else {
-			ret += " (only " + MAX_TWEETS_TO_PRINT + " are shown):\n";
+			ret += " (only " + MAX_TWEETS_TO_PRINT + " are shown)\n";
 			int numTweets = 0;
 			for (Tweet t: values) {
-				ret += t + "\n";
+				ret += "Username (" +t.getUser()+") :"+ t.getText() + "\n";
 				numTweets++;
 				if (numTweets >= MAX_TWEETS_TO_PRINT) {
 					break;
